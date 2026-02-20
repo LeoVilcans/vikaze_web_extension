@@ -1,0 +1,14 @@
+const observer = new MutationObserver(() => {
+    const popup = document.querySelector(".cookies_gdpr_popup");
+
+    if (popup) {
+        console.log("Mēsls noņemts - VIKAZE");
+        popup.remove();
+        observer.disconnect();
+    }
+});
+
+observer.observe(document.body, {
+    childList: true,
+    subtree: true
+});

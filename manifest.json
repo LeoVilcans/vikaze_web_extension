@@ -1,0 +1,27 @@
+{
+  "name": "VIKAZE",
+  "description": "Sponsored by VIKAZE",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "webview.html",
+    "default_icon": "icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "js": ["scripts/gnomio.js"],
+      "matches": [
+        "https://*.gnomio.com/*"
+      ]
+    },
+    {
+      "js": ["scripts/jak.js"],
+      "matches": [
+        "https://*.jttehnikums.lv/*",
+        "https://jttehnikums.lv/*",
+        "https://jak.lv/"
+      ]
+    }
+  ]
+}
