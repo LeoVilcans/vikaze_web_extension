@@ -4,17 +4,40 @@
         <meta charset="UTF-8">
         <style>
             body {
-                background-color: red;
-            }
-
-            h1 {
+                background-color: rgb(200, 27, 27);
+                width: 200px;
                 color: white;
             }
+
+            img {
+                width: 200px;
+                height: auto;
+            }
+
+            .extension_option {
+                background-color: rgb(132, 8, 8);
+                border-radius: 5px;
+                padding: 5px;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
         </style>
+
+        <script type="module" src="webview.js"></script>
     </head>
     <body>
-        <h1>VIKAZE</h1>
+        <img src="logo.png">
         <hr>
-        <p>Mājaslapu uzlabošanas pakalpojumi kopš 1987.g</p>
+        <p>Mājaslapu uzlabošanas pakalpojumi kopš 2025.g</p>
+        <div class="option_container">
+            <div class="extension_option">
+                <input id="jak_checkbox" type="checkbox">
+                <label for="jak_checkbox">JAK/JTTEHNIKUMS</label>
+            </div>
+            <div class="extension_option">
+                <input id="gnomio_checkbox" type="checkbox">
+                <label for="gnomio_checkbox">GNOMIO</label>
+            </div>
+        </div>
     </body>
 </html>
