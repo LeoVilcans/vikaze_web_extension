@@ -2,7 +2,7 @@ const observer = new MutationObserver(() => {
     const popup = document.querySelector(".cookies_gdpr_popup");
 
     if (popup) {
-        console.log("Mēsls noņemts - VIKAZE");
+        console.log("Popups noņemts - VIKAZE");
         popup.remove();
         observer.disconnect();
     }
