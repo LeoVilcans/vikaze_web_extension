@@ -35,3 +35,18 @@ gnomio_checkbox.addEventListener('change', (event) => {
         setStorageKey("vikaze_gnomio_option", event.currentTarget.checked);
     })();
 })
+
+
+
+
+
+const uzdevumilv_checkbox = document.getElementById("uzdevumilv_checkbox");
+(async () => {
+    let val = await checkStorageKey("vikaze_uzdevumilv_option");
+    uzdevumilv_checkbox.checked = val;
+})();
+uzdevumilv_checkbox.addEventListener('change', (event) => {
+    (async () => {
+        setStorageKey("vikaze_uzdevumilv_option", event.currentTarget.checked);
+    })();
+})

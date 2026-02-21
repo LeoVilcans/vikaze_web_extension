@@ -8,13 +8,29 @@
     "default_icon": "icon.png"
   },
   "permissions": [
-    "storage"
+    "storage",
+    "tabs",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
   ],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["scripts/storageUtils.js"],
       "run_at": "document_idle"
+    },
+    {
+      "js": [
+        "katex/katex.min.js",
+        "katex/contrib/auto-render.min.js",
+        "scripts/uzdevumilv.js"
+      ],
+      "matches": [
+        "https://*.uzdevumi.lv/*"
+      ],
+      "css": ["katex/katex.min.css"]
     },
     {
       "js": ["scripts/gnomio.js"],
@@ -30,5 +46,14 @@
         "https://jak.lv/"
       ]
     }
-  ]
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["katex/katex.min.css", "katex/katex.min.js", "katex/fonts/*"],
+      "matches": ["https://*.uzdevumi.lv/*"]
+    }
+  ],
+  "background": {
+    "service_worker": "scripts/background.js"
+  }
 }
